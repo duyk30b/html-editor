@@ -1,0 +1,65 @@
+:root {
+    --ranDCT12f3SDsa-color-error: red;
+    --ranDCT12f3SDsa-color-boolean: Magenta;
+    --ranDCT12f3SDsa-color-object: Chocolate;
+    --ranDCT12f3SDsa-color-string: DarkGreen;
+    --ranDCT12f3SDsa-color-number: Blue;
+}
+
+.ranDCT12f3SDsa {
+    position:fixed;
+    bottom:0;
+    left:0;
+    right:0;
+    border: 1px solid #cdcdcd;
+    background-color: white;
+    font-family: monospace;
+}
+.ranDCT12f3SDsa * {
+    margin: 0;
+    padding: 0;
+}
+.ranDCT12f3SDsa-head {
+    padding-left: 8px;
+    background-color: #cdcdcd;
+    color: #333;
+    user-select: none;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.ranDCT12f3SDsa-head > button {
+    padding: 0px 4px;
+}
+.ranDCT12f3SDsa-body {
+    height: 150px;
+    margin: 0;
+    padding: 4px 8px;
+    overflow: auto;
+}
+.ranDCT12f3SDsa-body.hide {
+    display: none;
+}
+.ranDCT12f3SDsa-foot {
+    padding: 2px 8px;
+    border-top: 1px solid #cdcdcd;
+}
+.ranDCT12f3SDsa-console_debugText::after {
+    content: " = ";
+}
+
+.ranDCT12f3SDsa-error {
+    color: var(--ranDCT12f3SDsa-color-error);
+}
+.ranDCT12f3SDsa-boolean {
+    color: var(--ranDCT12f3SDsa-color-boolean);
+}
+.ranDCT12f3SDsa-object {
+    color: var(--ranDCT12f3SDsa-color-object);
+}
+.ranDCT12f3SDsa-string {
+    color: var(--ranDCT12f3SDsa-color-string);
+}
+.ranDCT12f3SDsa-number {
+    color: var(--ranDCT12f3SDsa-color-number);
+}

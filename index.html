@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>HTML Editor Online 7.0</title>
+    <link rel="stylesheet" href="styles/main.css">
+
+    <link rel="stylesheet" href="codemirror/lib/codemirror.css">
+    <script src="codemirror/lib/codemirror.js"></script>
+
+    <script src="codemirror/mode/javascript/javascript.js"></script>
+    <script src="codemirror/mode/xml/xml.js"></script>
+    <script src="codemirror/mode/css/css.js"></script>
+    <script src="codemirror/mode/htmlmixed/htmlmixed.js"></script>
+
+    <link rel="stylesheet" href="codemirror/addon/hint/show-hint.css">
+    <script src="codemirror/addon/hint/show-hint.js"></script>
+    <script src="codemirror/addon/hint/css-hint.js"></script>
+    <script src="codemirror/addon/hint/html-hint.js"></script>
+    <script src="codemirror/addon/hint/xml-hint.js"></script>
+    <script src="codemirror/addon/hint/javascript-hint.js"></script>
+    <script src="codemirror/addon/hint/anyword-hint.js"></script>
+
+    <link rel="stylesheet" href="codemirror/addon/fold/foldgutter.css">
+    <script src="codemirror/addon/fold/foldcode.js"></script>
+    <script src="codemirror/addon/fold/foldgutter.js"></script>
+    <script src="codemirror/addon/fold/brace-fold.js"></script>
+    <script src="codemirror/addon/fold/xml-fold.js"></script>
+    
+    <script src="codemirror/addon/edit/closebrackets.js"></script>
+    <script src="codemirror/addon/edit/closetag.js"></script>
+    <script src="codemirror/addon/edit/matchbrackets.js"></script>
+    <script src="codemirror/addon/edit/matchtags.js"></script>
+
+    <link rel="stylesheet" href="codemirror/addon/lint/lint.css">
+    <script src="codemirror/addon/lint/lint.js"></script>
+    <script src="codemirror/addon/lint/css-lint.js"></script>
+    <script src="codemirror/addon/lint/unpkg-1.0.5-csslint.js"></script>
+
+    <script src="codemirror/emmet/emmet.js"></script>
+
+</head>
+
+<body>
+    <header>
+        <button class="btnClearCode" onclick="click_ClearCode()">Clear Code</button>
+        <button class="btnDemoCode" onclick="click_DemoCode()">Demo Code</button>
+        <button class="btnFormatCode" onclick="click_FormatCode()">Format Code</button>     
+        <button class="btnRotate" onclick="click_Rotate()">Rotate</button>
+        <button class="btnPopup" onclick="click_Popup()">Popup</button>
+        <a class="link-assets" href="./assets/CSS-Flex.html" target="_blank">CSS-Flex</a>
+        <a class="link-assets" href="./assets/TinyMCE.html" target="_blank">TinyMCE</a>
+    </header>
+    <main>
+        <div id="editBox">
+            <div id="HTMLArea" class="itemArea active" data-type="HTML">
+                <div class="navController">
+                    <div class="itemNav active" data-type="HTML">index.html</div>
+                    <div class="btnNavHide" onclick="click_hide_itemArea('HTMLArea')"></div>
+ 
+                </div>
+                <div class="navPanel">
+                    <div class="HTMLPanel itemPanel active" data-type="HTML"></div>
+                </div>
+
+            </div>
+            <div id="CSSArea" class="itemArea active" data-type="CSS">
+                <div class="navController" data-type="CSS">
+                    <div class="CSSNav itemNav active" onclick="click_itemNav(this)" data-type="CSS">
+                        <div>style.css</div>
+                        <div class="btnNavDel" onclick="click_btnNavDel(this)" data-type="CSS">x</div>
+                    </div>
+                    <div class="btnNavPlus" onclick="click_add_CSSPanel(this)">+</div>
+                    <div class="btnNavHide" onclick="click_hide_itemArea('CSSArea')"></div>
+  
+                </div>
+                <div class="navPanel" data-type="CSS">
+                    <div class="CSSPanel itemPanel active" data-type="CSS"></div>
+                </div>
+
+            </div>
+            <div id="JSArea" class="itemArea active" data-type="JS">
+                <div class="navController" data-type="JS">
+                    <div class="JSNav itemNav active" onclick="click_itemNav(this)" data-type="JS">
+                        <div>function.js</div>
+                        <div class="btnNavDel" onclick="click_btnNavDel(this)" data-type="JS">x</div>
+                    </div>
+                    <div class="btnNavPlus" onclick="click_add_JSPanel(this)">+</div>
+                    <div class="btnNavHide" onclick="click_hide_itemArea('JSArea')"></div>
+                </div>
+                <div class="navPanel" data-type="JS">
+                    <div class="JSPanel itemPanel active" onmouseup="click_JSPanel(this)" data-type="JS"></div>
+                </div>
+            </div>
+        </div>
+        <div id="preview">
+            <iframe></iframe>
+        </div>
+    </main>
+
+    <script src="js/class/htmlmirror.js"></script>
+    <script src="js/class/cssmirror.js"></script>
+    <script src="js/class/jsmirror.js"></script>
+    <script src="js/render.js"></script>
+    <script src="js/function.js"></script>
+</body>
+
+</html>

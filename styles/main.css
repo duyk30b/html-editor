@@ -1,0 +1,212 @@
+:root {
+    --preview-width: 50%;
+    --color-brown: #6c757d;
+}
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-size: 14px;
+}
+
+body {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+
+/* ---------Phần Header--------- */
+
+header {
+    width: 100%;
+}
+
+header > button {
+    float: left;
+    margin: 2px;
+    padding: 0.5rem 0.75rem;
+    border: 1px solid var(--color-brown);
+    border-radius: 0.25rem 0.25rem 0 0;
+    background-color: white;
+    cursor: pointer;
+}
+
+header > button:hover {
+    background-color: #374958 !important;
+    color: white;
+}
+
+header > a.link-assets {
+    text-decoration: none;
+    margin: 2px;
+    padding: 0.5rem 0.75rem;
+    float: right;
+    background-color: rgb(240 81 35);
+    border-radius: 0.25rem;
+    color: white;
+    font-size: 1.2rem;
+}
+
+
+
+
+/* ---------Phần Main--------- */
+
+main {
+    float: left;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    height: calc(100% - 3rem);
+}
+
+#preview {
+    flex-grow: 1;
+    min-width: 300px;
+}
+
+iframe {
+    width: 100%;
+    height: 100%;
+}
+
+#editBox {
+    min-width: 300px;
+    display: grid;
+    grid-template-areas: 'HTML CSS''HTML JS';
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    grid-column-gap: 1px;
+    border: 1px solid var(--color-brown);
+    margin-right: 2px;
+    resize: horizontal;
+    overflow: auto;
+    font-family: Consolas, 'ConsolasRegular', 'Courier New', monospace !important;
+}
+
+#HTMLArea {
+    grid-area: HTML;
+    overflow: auto;
+}
+#CSSArea {
+    grid-area: CSS;
+    overflow: auto;
+}
+#JSArea {
+    grid-area: JS;
+    overflow: auto;
+}
+
+
+.navPanel {
+    width: 100%;
+    height: calc(100% - 2.75rem) !important;
+}
+
+.itemPanel {
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    border: 0;
+    border: 1px solid var(--color-brown);
+}
+
+/* ---------Desgin các nút--------- */
+
+.navController>div {
+    margin: 2px;
+    padding: 0.5rem 0.75rem;
+    border: 1px solid var(--color-brown);
+    border-radius: 0.25rem 0.25rem 0 0;
+    background-color: white;
+    cursor: pointer;
+}
+
+.btnNavPlus, .itemNav, .itemNav>div {
+    float: left;
+    user-select: none;
+}
+
+.btnNavHide {
+    float: right;
+    user-select: none;
+}
+
+.btnNavDel {
+    margin: 0 -5px 0 10px;
+    height: 1rem;
+    width: 1rem;
+    text-align: center;
+    line-height: 0.9rem;
+    border-radius: 50%;
+    font-size: 12px
+}
+
+.btnNavDel:hover, .btnNavDel:focus {
+    background-color: #bd2130;
+    color: white;
+}
+
+.navController>div:hover {
+    background-color: #374958 !important;
+    color: white;
+}
+
+/* ---------Class chức năng--------- */
+
+body:not(.hasPopup) #preview {
+    display: block;
+}
+body.hasPopup #preview {
+    display: none;
+}
+body:not(.hasPopup) #editBox {
+    width: calc(100% - var(--preview-width));
+}
+body.hasPopup #editBox {
+    width: 100% !important;
+}
+body:not(.hasPopup) .btnPopup::before {
+    content: "Open ";
+}
+body.hasPopup .btnPopup::before {
+    content: "Close "
+}
+
+.show {
+    display: block
+}
+
+.hide {
+    display: none
+}
+
+.itemArea.active .btnNavHide::after {
+    content:"-";
+}
+.itemArea:not(.active) .btnNavHide::after {
+    content:"+";
+}
+
+.itemArea:not(.active) .itemPanel {
+    display: none !important;
+}
+
+.itemPanel:not(.active) {
+    display: none !important;
+}
+
+.itemNav.active {
+    background-color: var(--color-brown);
+    color: white;
+}
+
+.itemPanel {
+    display: none;
+}
+
+.itemPanel.active {
+    display: block;
+}
