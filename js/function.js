@@ -245,7 +245,6 @@ window.onbeforeunload = function () {
 };
 
 let first_run = () => {
-	render.reloadPreview();
 	click_hide_itemArea('CSSArea');
 	click_hide_itemArea('JSArea');
 };
