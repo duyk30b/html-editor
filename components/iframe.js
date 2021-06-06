@@ -110,7 +110,7 @@ let reloadDebug = (debug) => {
         console.debug(debug);
     }
     else {
-        debugValue = debug;
+        debugValue = typeof debug;
 		console.log(debug);
     }
     console_debugValue.innerText = debugValue;
