@@ -111,6 +111,7 @@ let reloadDebug = (debug) => {
     }
     else {
         debugValue = debug;
+		console.log(debug);
     }
     console_debugValue.innerText = debugValue;
 }
