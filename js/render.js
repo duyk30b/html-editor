@@ -204,7 +204,7 @@ class Render {
 		let cssBase = document.createElement('link');
 		cssBase.rel = 'stylesheet';
 		cssBase.type = 'text/css';
-		cssBase.href = 'component/iframe.css';
+		cssBase.href = 'components/iframe.css';
 		w.document.head.appendChild(cssBase);
 
 		let jsBase = document.createElement('script');
