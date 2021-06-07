@@ -4,159 +4,52 @@
 		<meta charset="UTF-8" />
 		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<title>CSS Flex 1.0</title>
-		<style>
-			* {
-				margin: 0;
-				padding: 0;
-				box-sizing: border-box;
-				font-size: 100%;
-			}
-
-			body {
-				width: 100%;
-				background-color: #333;
-				color: #ddd;
-				font-family: Verdana, Geneva, sans-serif;
-				line-height: 2rem;
-			}
-			.container {
-				margin: 0 auto;
-				padding: 10px;
-				display: flex;
-			}
-
-			.flex-container {
-				width: 550px;
-				height: 550px;
-                min-width: 250px;
-				display: flex;
-				flex-wrap: wrap;
-				align-content: flex-start;
-				align-items: flex-start;
-				position: sticky;
-				top: 10px;
-                border: 1px solid #ddd;
-                margin-left: 10px;
-			}
-			.item-1 {
-				background-color: rgb(42, 128, 185);
-			}
-			.item-2 {
-				background-color: rgb(143, 68, 173);
-			}
-			.item-3 {
-				background-color: rgb(22, 160, 134);
-			}
-			.item-4 {
-				background-color: rgb(52, 73, 94);
-			}
-			.item-5 {
-				background-color: rgb(231, 126, 35);
-			}
-            .item-6 {
-				background-color: rgb(39, 174, 97);
-			}
-			.item-7 {
-				background-color: rgb(232, 76, 61);
-			}
-
-
-			.flex-item > div {
-				width: 80px;
-				height: 80px;
-				font-size: 1.2rem;
-				border: 1px solid rgb(231, 199, 199);
-			}
-
-			.item-3 > div {
-				width: 200px;
-				height: 200px;
-				font-size: 3.5rem;
-			}
-
-			.item-6 > div {
-				width: 140px;
-				height: 140px;
-				font-size: 2.5rem;
-			}
-
-			.flex-item > div > p {
-				width: 100%;
-				height: 100%;
-				display: flex;
-				justify-content: center;
-				align-items: center;
-			}
-
-			.control {
-				flex: 1;
-			}
-
-			.control-i {
-				padding: 0.5rem 0.5rem 0.5rem 2rem;
-				display: flex;
-				font-size: 1rem;
-				font-family: monospace;
-                border-top: 1px solid rgba(221, 221, 221, 0.329);
-			}
-
-			.control-i > p {
-				width: 10rem;
-			}
-
-			.control-input-group {
-				flex: 1;
-				display: flex;
-				flex-wrap: wrap;
-			}
-
-			.form-group {
-				width: 11rem;
-				display: flex;
-				align-items: center;
-			}
-			.form-group label {
-				margin-left: 5px;
-				flex: 1;
-			}
-
-			select[name='select-list'] {
-				margin-left: 50px;
-			}
-
-			input[type='radio']:checked + label {
-				color: orange;
-			}
-			input[type='radio'],
-			label {
-				cursor: pointer;
-			}
-			small {
-				font-size: 60%;
-				color: #57bcdb;
-			}
-
-			h3 {
-				background-color: #222;
-                border-top: 1px solid rgba(221, 221, 221, 0.329);
-                padding: 0.5rem 1rem;
-			}
-
-			@media only screen and (max-width: 1200px) {
-			}
-			@media only screen and (max-width: 800px) {
-                .control-i {
-                    flex-direction: column;
-                    padding-left: 0.5rem;
-                }
-			}
-		</style>
+		<title>CSS Flex 1.1</title>
+		<link rel="stylesheet" href="./css-flex.css" />
 	</head>
 	<body>
 		<div class="container">
 			<div class="control">
-				<h3>A. Flex Container</h3>
+				<h3>A. Flex Container:</h3>
+				<div class="control-i">
+					<p>Show Items:</p>
+					<div class="control-input-group">
+						<div class="form-group">
+							<input type="checkbox" value="item-1" id="cb-item-1" checked/>
+							<label for="cb-item-1">Item-1</label>
+						</div>
+						<div class="form-group">
+							<input type="checkbox" value="item-2" id="cb-item-2" checked/>
+							<label for="cb-item-2">Item-2</label>
+						</div>
+						<div class="form-group">
+							<input type="checkbox" value="item-3" id="cb-item-3" checked/>
+							<label for="cb-item-3">Item-3</label>
+						</div>
+						<div class="form-group">
+							<input type="checkbox" value="item-4" id="cb-item-4" checked/>
+							<label for="cb-item-4">Item-4</label>
+						</div>
+						<div class="form-group">
+							<input type="checkbox" value="item-5" id="cb-item-5"/>
+							<label for="cb-item-5">Item-5</label>
+						</div>
+						<div class="form-group">
+							<input type="checkbox" value="item-6" id="cb-item-6" />
+							<label for="cb-item-6">Item-6</label>
+						</div>
+						<div class="form-group">
+							<input type="checkbox" value="item-7" id="cb-item-7" />
+							<label for="cb-item-7">Item-7</label>
+						</div>
+						<div class="form-group">
+							<input type="checkbox" value="item-8" id="cb-item-8" />
+							<label for="cb-item-8">Item-8</label>
+						</div>
+					</div>
+				</div>
+
+
 				<div class="control-i">
 					<p>flex-direction:</p>
 					<div class="control-input-group">
@@ -319,6 +212,7 @@
 						<option value="item-5">item-5</option>
 						<option value="item-6">item-6</option>
 						<option value="item-7">item-7</option>
+						<option value="item-8">item-8</option>
 					</select>
 				</h3>
 				<div class="control-i">
@@ -371,71 +265,20 @@
 				<div class="flex-item item-4">
 					<div><p>4</p></div>
 				</div>
-				<div class="flex-item item-5">
+				<div class="flex-item item-5" style="display:none">
 					<div><p>5</p></div>
 				</div>
-				<div class="flex-item item-6">
+				<div class="flex-item item-6" style="display:none">
 					<div><p>6</p></div>
 				</div>
-				<div class="flex-item item-7">
+				<div class="flex-item item-7" style="display:none">
 					<div><p>7</p></div>
+				</div>
+				<div class="flex-item item-8" style="display:none">
+					<div><p>8</p></div>
 				</div>
 			</div>
 		</div>
-		<script>
-			let flexContainer = document.getElementsByClassName('flex-container')[0];
-			let flexItem = document.getElementsByClassName('flex-item');
-
-			document.querySelectorAll("input[type=radio][name='flex-direction']").forEach((item) => {
-				item.addEventListener('change', function () {
-					flexContainer.style.flexDirection = this.value;
-				});
-			});
-
-			document.querySelectorAll("input[type=radio][name='flex-wrap']").forEach((item) => {
-				item.addEventListener('change', function () {
-					flexContainer.style.flexWrap = this.value;
-				});
-			});
-
-			document.querySelectorAll("input[type=radio][name='justify-content']").forEach((item) => {
-				item.addEventListener('change', function () {
-					flexContainer.style.justifyContent = this.value;
-				});
-			});
-
-			document.querySelectorAll("input[type=radio][name='align-content']").forEach((item) => {
-				item.addEventListener('change', function () {
-					flexContainer.style.alignContent = this.value;
-				});
-			});
-
-			document.querySelectorAll("input[type=radio][name='align-items']").forEach((item) => {
-				item.addEventListener('change', function () {
-					flexContainer.style.alignItems = this.value;
-				});
-			});
-
-			let selectList = document.querySelector("select[name='select-list']");
-			let ip_alignSelf = document.querySelectorAll("input[type='radio'][name='align-self']");
-
-			ip_alignSelf.forEach((item) => {
-				item.addEventListener('change', function () {
-					let itemChoose = document.getElementsByClassName(selectList.value)[0];
-					itemChoose.style.alignSelf = this.value;
-				});
-			});
-
-			selectList.addEventListener('change', function () {
-				ip_alignSelf.forEach((i) => (i.checked = false));
-
-				let itemChoose = document.getElementsByClassName(selectList.value)[0];
-				let temp = itemChoose.style.alignSelf;
-				let ipRadio = document.querySelector("input[type='radio'][name='align-self'][value='" + temp + "']");
-				if (ipRadio) {
-					ipRadio.checked = true;
-				}
-			});
-		</script>
+		<script src="./css-flex.js"></script>
 	</body>
 </html>

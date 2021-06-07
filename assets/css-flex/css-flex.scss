@@ -1,0 +1,146 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-size: 100%;
+}
+
+body {
+	width: 100%;
+	background-color: #333;
+	color: #ddd;
+	font-family: Verdana, Geneva, sans-serif;
+	line-height: 2rem;
+}
+
+select[name='select-list'] {
+	margin-left: 50px;
+}
+
+input[type='checkbox']:checked + label,
+input[type='radio']:checked + label {
+	color: orange;
+}
+input[type='radio'],
+label {
+	cursor: pointer;
+}
+small {
+	font-size: 60%;
+	color: #57bcdb;
+}
+
+h3 {
+	background-color: #222;
+	border-top: 1px solid rgba(221, 221, 221, 0.329);
+	padding: 0.5rem 1rem;
+}
+
+.container {
+	margin: 0 auto;
+	padding: 10px;
+	display: flex;
+}
+
+.control {
+	flex: 1;
+	.control-i {
+		padding: 0.5rem 0.5rem 0.5rem 2rem;
+		display: flex;
+		font-size: 1rem;
+		font-family: monospace;
+		border-top: 1px solid rgba(221, 221, 221, 0.329);
+		align-items: center;
+		p {
+			width: 10rem;
+		}
+		.control-input-group {
+			flex: 1;
+			display: flex;
+			flex-wrap: wrap;
+			.form-group {
+				width: 11rem;
+				display: flex;
+				align-items: center;
+				label {
+					margin-left: 5px;
+					flex: 1;
+				}
+			}
+		}
+	}
+}
+
+.flex-container {
+	width: 550px;
+	height: 550px;
+	min-width: 250px;
+	display: flex;
+	flex-wrap: wrap;
+	align-content: flex-start;
+	align-items: flex-start;
+	position: sticky;
+	top: 10px;
+	border: 1px solid #ddd;
+	margin-left: 10px;
+
+	.flex-item {
+		div {
+			width: 80px;
+			height: 80px;
+			font-size: 1.2rem;
+			border: 1px solid rgb(231, 199, 199);
+			p {
+				width: 100%;
+				height: 100%;
+				display: flex;
+				justify-content: center;
+				align-items: center;
+			}
+		}
+	}
+
+	.item-1 {
+		background-color: rgb(42, 128, 185);
+	}
+	.item-2 {
+		background-color: rgb(143, 68, 173);
+	}
+	.item-3 {
+		background-color: rgb(22, 160, 134);
+		div {
+			width: 140px;
+			height: 140px;
+			font-size: 3.5rem;
+		}
+	}
+	.item-4 {
+		background-color: rgb(232, 76, 61);
+	}
+	.item-5 {
+		background-color: rgb(231, 126, 35);
+	}
+	.item-6 {
+		background-color: rgb(50, 174, 39);
+		div {
+			width: 180px;
+			height: 180px;
+			font-size: 2.5rem;
+		}
+	}
+	.item-7 {
+		background-color: rgb(52, 73, 94);
+	}
+	.item-8 {
+		background-color: rgba(195, 232, 61, 0.521);
+	}
+}
+
+@media only screen and (max-width: 1200px) {
+}
+@media only screen and (max-width: 800px) {
+	.control-i {
+		flex-direction: column;
+		padding-left: 0.5rem;
+	}
+}
