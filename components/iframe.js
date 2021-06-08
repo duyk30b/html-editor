@@ -13,7 +13,7 @@ console_body.classList.add(random_name + '-body');
 
 let console_foot = document.createElement('div');
 console_foot.classList.add(random_name + '-foot');
-console_foot.innerHTML = '<span>Debug: </span>';
+console_foot.innerHTML = '<span>typeof </span>';
 
 let console_debugText = document.createElement('span');
 console_debugText.classList.add(random_name + '-console_debugText');
@@ -111,7 +111,7 @@ let reloadDebug = (debug) => {
     }
     else {
         debugValue = typeof debug;
-		console.log(debug);
+		console.debug(debug);
     }
     console_debugValue.innerText = debugValue;
 }
