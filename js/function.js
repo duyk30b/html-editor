@@ -221,7 +221,7 @@ let checkRegexDebug = (debugText) => {
 		'if else switch case ' +
 		'function return ' +
 		'try catch finally ' +
-		'null default true false ' +
+		'null default' +
 		'debugger delete export extends import instanceof throw typeof void with yield '
 	).split(' ');
 	if (excuteJS.includes(debugText)) return false;

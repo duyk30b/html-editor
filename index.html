@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="UTF-8">
-    <title>HTML Editor Online 7.0.1</title>
+    <title>HTML Editor Online 7.0.2</title>
     <link rel="stylesheet" href="styles/main.css">
 
     <link rel="stylesheet" href="codemirror/lib/codemirror.css">
@@ -44,13 +44,20 @@
 
 <body>
     <header>
-        <button class="btnClearCode" onclick="click_ClearCode()">Clear Code</button>
-        <button class="btnDemoCode" onclick="click_DemoCode()">Demo Code</button>
-        <button class="btnFormatCode" onclick="click_FormatCode()">Format Code</button>     
-        <button class="btnRotate" onclick="click_Rotate()">Rotate</button>
-        <button class="btnPopup" onclick="click_Popup()">Popup</button>
-        <a class="link-assets" href="./assets/css-flex/css-flex.html" target="_blank">CSS-Flex</a>
-        <a class="link-assets" href="./assets/tinymce/TinyMCE.html" target="_blank">TinyMCE</a>
+        <div class="button-control">
+            <button class="btnClearCode" onclick="click_ClearCode()">Clear Code</button>
+            <button class="btnDemoCode" onclick="click_DemoCode()">Demo Code</button>
+            <button class="btnFormatCode" onclick="click_FormatCode()">Format Code</button>     
+            <button class="btnRotate" onclick="click_Rotate()">Rotate</button>
+            <button class="btnPopup" onclick="click_Popup()">Popup</button>
+        </div>
+        <div class="title">
+            <span>HTML - Editor</span>  <small>v.7.0.2</small>
+        </div>
+        <div class = "button-assets">
+            <a class="link-assets" href="./assets/css-flex/css-flex.html" target="_blank">CSS-Flex</a>
+            <a class="link-assets" href="./assets/tinymce/TinyMCE.html" target="_blank">TinyMCE</a>
+        </div>
     </header>
     <main>
         <div id="editBox">
